@@ -22,7 +22,7 @@ distributions {
 }
 
 if (!hasProperty('mainClass')) {
-    ext.mainClass = 'src.main.java.com.vgorcinschi.bootone.main.BootOneApplication'
+    ext.mainClass = 'com.vgorcinschi.bootone.main.BootOneApplication'
 }
 
 task wrapper(type: Wrapper){

@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.main.java.com.vgorcinschi.bootone.web;
+package com.vgorcinschi.bootone.web;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import src.main.java.com.vgorcinschi.bootone.repository.JournalRepository;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.vgorcinschi.bootone.domain.Journal;
+import com.vgorcinschi.bootone.repository.JournalRepository;
 
 /**
  *
@@ -23,7 +27,14 @@ public class JournalController {
 
     @RequestMapping("/")
     public String index(Model model) {
+        System.out.println("method index entered");
         model.addAttribute("journal", journalRepository.findAll());
         return "index";
+    }
+    
+    @RequestMapping(value="/journal", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+    public @ResponseBody List<Journal> getJournal(){
+        System.out.println("method getJournal entered");
+        return journalRepository.findAll();
     }
 }

@@ -1,6 +1,6 @@
-package src.test.java.com.vgorcinschi.bootone.main;
+package com.vgorcinschi.bootone.main;
 
-import src.main.java.com.vgorcinschi.bootone.main.BootOneApplication;
+import com.vgorcinschi.bootone.main.BootOneApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;

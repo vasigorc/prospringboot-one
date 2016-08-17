@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.main.java.com.vgorcinschi.bootone.repository;
+package com.vgorcinschi.bootone.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import src.main.java.com.vgorcinschi.bootone.domain.Journal;
+import com.vgorcinschi.bootone.domain.Journal;
 
 /**
  *

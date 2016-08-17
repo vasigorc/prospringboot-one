@@ -1,4 +1,4 @@
-package src.main.java.com.vgorcinschi.bootone.main;
+package com.vgorcinschi.bootone.main;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import src.main.java.com.vgorcinschi.bootone.domain.Journal;
-import src.main.java.com.vgorcinschi.bootone.repository.JournalRepository;
+import com.vgorcinschi.bootone.domain.Journal;
+import com.vgorcinschi.bootone.repository.JournalRepository;
 
 @SpringBootApplication
-@EntityScan("src.main.java.com.vgorcinschi.bootone.domain")
-@EnableJpaRepositories("src.main.java.com.vgorcinschi.bootone.repository") 
+@EntityScan("com.vgorcinschi.bootone.domain")
+@EnableJpaRepositories("com.vgorcinschi.bootone.repository") 
 public class BootOneApplication {
     
     @Bean
