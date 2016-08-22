@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.vgorcinschi.bootone.domain.Journal;
 import com.vgorcinschi.bootone.repository.JournalRepository;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EntityScan("com.vgorcinschi.bootone.domain")
+@ComponentScan("com.vgorcinschi.bootone.web")
 @EnableJpaRepositories("com.vgorcinschi.bootone.repository") 
 public class BootOneApplication {
     
